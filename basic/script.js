@@ -93,3 +93,95 @@ do {
 for (let i = o; i < 3; i++) {
     alert(i);
 }
+
+// with break cna force to break the loop at any time
+let sum = 0;
+while (true) {
+    let value = +prompt("Enter a number", '');
+    if (!value) break;
+
+    sum += value;
+}
+alert('Sum' + sum);
+
+// continue to the next iteration. forces to break the current loop and go to the next one
+for (let i = 0; i < 10; i++) {
+    if (i % 2 == 0) continue;
+}
+
+// switch descriptive way to compare a value wit multiple variants
+/*
+switch (x) {
+    case 'value1': // if (x === 'value1')
+        ...
+        [
+            break
+        ]
+    case 'value2':
+        ...
+        [
+            break
+        ]
+    default:
+        ...
+        [
+            break
+        ]
+}
+*/
+
+let a = 2 + 2;
+
+
+switch (a) {
+    case 3:
+        alert('to small');
+        break;
+    case 4:
+        alert('Correct!');
+        break;
+    case 5:
+        alert('to large');
+        break;
+    default:
+        alert('pick another value');
+}
+
+// functions allow code to be called many times without repetition
+// funtion name(parameters) {
+// ...body...
+// }
+
+function showMessage() {
+    let message = 'Helo, I am JS'; // local variable
+    alert('Hello everyone!')
+}
+
+showMessage();
+// local varaibles devlared inside a function will only be visible inside that function
+
+// Returning a value, return a alue back
+function sum(a, b) {
+    return a + b;
+}
+let result = sum(1, 2);
+alert(result);
+
+function checkAge(age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return confirm('DO you have permission from your parents?');
+    }
+}
+
+let age = prompt('How old are you?', 18);
+
+if (checkAge(age)) {
+    alert('Access granted');
+} else {
+    alert('Acess denied')
+}
+
+let sum = (a, b) => a + b;
+alert(sum(1, 2));
